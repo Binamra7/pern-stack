@@ -34,18 +34,6 @@ function InputTodo() {
           });
         }}
       />
-      {/* <textarea
-        name="desc"
-        id="desc"
-        placeholder="Enter description"
-        value={todo.descriptions}
-        onChange={(e) => {
-          setTodo({
-            ...todo,
-            descriptions: e.target.value,
-          });
-        }}
-      ></textarea> */}
       <button>Add Todo</button>
     </form>
   );

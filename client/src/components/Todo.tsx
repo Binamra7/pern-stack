@@ -1,8 +1,4 @@
-//create component to render todo
-// Language: typescript
-// Path: client\src\components\Todo.tsx
-// Compare this snippet from client\src\App.tsx:
-import React, { FC } from "react";
+import { FC } from "react";
 import "./Todo.css";
 import axios from "axios";
 interface TodoProps {
@@ -14,7 +10,7 @@ interface TodoProps {
 }
 
 const handleDelete = (id: number) => {
-    console.log("delete", id);
+  console.log("delete", id);
   axios.delete(`http://localhost:5000/todos/${id}`).then((res) => {
     console.log(res.data);
   });

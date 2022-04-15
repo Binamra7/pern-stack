@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Todo from "./Todo";
 import "./Todos.css";
@@ -12,17 +12,15 @@ function Todos() {
     });
   }, []);
 
-  console.log("todos", todos);
-
   return (
     <div className="todos">
       <h1>Todos</h1>
-
-      {todos.slice(0).reverse().map((todo) => (
-              <Todo
-                  todo={todo}
-              />
-            ))}
+      {todos
+        .slice(0)
+        .reverse()
+        .map((todo) => (
+          <Todo todo={todo} />
+        ))}
     </div>
   );
 }
